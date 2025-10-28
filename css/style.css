@@ -39,14 +39,17 @@ body {
   padding: 15px 15px;
   margin: 0 0 15px;
 }
-
-/* Some random next button */
 #next-button {
   display: inline-block;
-  border: 1px solid #faf6f6cf;
-  background-color: #f7f7f77f;
-  color: #666666;
+  align-items: center;
+  border: 1px solid #151515cf;
+  background-color: #6865657f;
+  color: #595454;
   font-size: 15px;
   padding: 10px 10px;
   cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .number-boxes { gap: 8px; }
 }
