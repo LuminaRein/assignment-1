@@ -21,3 +21,5 @@ In this assignment, you will build a fully functional and styled interactive qui
 git clone [your-forked-repository-url]
 cd [repository-name]
 ```
+
+[Quiz](https://luminarein.github.io/assignment-1/quiz.html)
