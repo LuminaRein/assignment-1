@@ -31,6 +31,20 @@ const questionElement = document.getElementById("question");
 const optionsElements = document.querySelectorAll(".option");
 const nextButton = document.getElementById("next-button");
 
+// click handlr for option buttons
+optionsElements.forEach((button, index) => {
+  button.addEventListener("click", () => {
+
+    if (nextButton.style.display === "block") return;
+
+    selectAnswer(index);
+
+    optionsElements.forEach(b => (b.disabled = true));
+  });
+});
+
+nextButton.addEventListener("click", nextQuestion);
+
 function loadQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
   questionElement.textContent = currentQuestion.question;
@@ -38,6 +52,7 @@ function loadQuestion() {
   optionsElements.forEach((button, index) => {
     button.textContent = currentQuestion.options[index];
     button.classList.remove("correct", "wrong");
+    button.disabled = false;
   });
 
   nextButton.style.display = "none";

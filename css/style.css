@@ -50,6 +50,17 @@ body {
   cursor: pointer;
 }
 
+/* correct button */
+.option.correct{
+  background-color: #16a34a;
+}
+
+/* wrong button */
+.option.wrong {
+  background-color: #ef4444;
+  opacity: 0.85;
+}
+
 @media (max-width: 520px) {
   .number-boxes { gap: 8px; }
 }
